@@ -7,11 +7,13 @@
 --     user_email VARCHAR(255)
 -- )
 
-CREATE DATABASE expense;
 
 CREATE TABLE expenses(
     id SERIAL PRIMARY KEY,
     item VARCHAR(255),
+    user_name VARCHAR(50),
     price INT,
+    budget INT,
+    balance INT,
     purchase_date DATE
-)
+);
