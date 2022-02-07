@@ -7,19 +7,17 @@ function Input(e) {
     const priceInput = React.createRef(); 
     
     async function addItemPrice(e) {
-        console.log("item", itemInput.current.value);
-        console.log("price", priceInput.current.value);
         const response = await axios({
             method: 'post',
             url: "http://localhost:5000/addpurchase",
             data: {
                 item: itemInput.current.value,
-                price: priceInput.current.value            
+                price: priceInput.current.value,
+                date: new Date()            
             }
         });
         console.log("response", response);
     }
-
 
     return (
         <>
