@@ -8,10 +8,12 @@ const path = require('path');
 app.use(express.json());
 app.use(cors());
 // app.use(express.static(path.resolve(__dirname, "..", "build")));
-app.use(express.static(path.resolve(__dirname + "/build")));
+// app.use(express.static(path.resolve(__dirname + "/build")));
+app.use(express.static(__dirname + "/build"));
 
 
 const PORT = process.env.PORT || 5000;
+console.log("port", PORT);
 // route
 app.post("/addpurchase", async (req, res) => {
     try {
