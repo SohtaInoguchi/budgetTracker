@@ -6,6 +6,8 @@ const pool = require("./db");
 // middleware
 app.use(express.json());
 app.use(cors());
+app.use(express.static(path.resolve(__dirname, "..", "build")));
+
 
 const PORT = process.env.PORT || 5000;
 // route
