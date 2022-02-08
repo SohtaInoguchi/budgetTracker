@@ -59,6 +59,8 @@ app.get("/purchaseRecords", async (req, res) => {
 // // login routers
 app.use("/auth", require("./server/jwtAuto"));
 
+app.use("/dashboard", (require('./server/dashboard')));
+
 app.listen(PORT, () => {
     console.log(`app listens port ${PORT}`);
 })
