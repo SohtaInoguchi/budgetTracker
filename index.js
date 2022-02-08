@@ -4,6 +4,7 @@ const cors = require("cors");
 const pool = require("./server/db");
 const path = require('path');
 const dotenv = require('dotenv');
+const poolTwo = require('./server/logindb');
 
 const PORT = process.env.PORT || 5000;
 
@@ -54,8 +55,9 @@ app.get("/purchaseRecords", async (req, res) => {
     }
 })
 
+
 // // login routers
-// app.use("/auth", require("./jwtAuto"));
+app.use("/auth", require("./server/jwtAuto"));
 
 app.listen(PORT, () => {
     console.log(`app listens port ${PORT}`);
