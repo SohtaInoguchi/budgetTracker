@@ -3,7 +3,6 @@ const axios = require('axios');
 
 
 function Input(props) {
-    console.log("budget", props.budget);
     const itemInput = React.createRef(); 
     const priceInput = React.createRef(); 
     
@@ -24,7 +23,7 @@ function Input(props) {
                 price: priceInput.current.value,
                 user: props.user,
                 budget: props.budget,
-                balance: props.balance,
+                balance: newBalance,
                 date: new Date()
             }
         });
