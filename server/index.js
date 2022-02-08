@@ -2,11 +2,13 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const pool = require("./db");
+const path = require('path');
 
 // middleware
 app.use(express.json());
 app.use(cors());
-app.use(express.static(path.resolve(__dirname, "..", "build")));
+// app.use(express.static(path.resolve(__dirname, "..", "build")));
+app.use(express.static(path.resolve(__dirname + "/build")));
 
 
 const PORT = process.env.PORT || 5000;
