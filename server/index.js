@@ -44,9 +44,9 @@ app.get("/purchaseRecords", async (req, res) => {
     }
 })
 
-app.get("/", (req, res) => {
-    res.sendFile(path.resolve(__dirname + "/build", "index.html"));
-});
+// app.get("/", (req, res) => {
+//     res.sendFile(path.resolve(__dirname + "/build", "index.html"));
+// });
 
 app.listen(PORT, () => {
     console.log(`app listens port ${PORT}`);
