@@ -29,7 +29,8 @@ function App() {
     const response = await axios({
         method: 'get',
         // url: `http://localhost:5000/purchaseRecords/${username}`,
-        url: `http://localhost:5000/purchaseRecords`,
+        // url: `http://localhost:5000/purchaseRecords`,
+        url: `/purchaseRecords`,
         // params: {
         //   user: username
         // }
