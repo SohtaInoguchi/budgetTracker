@@ -3,6 +3,7 @@ const app = express();
 const cors = require("cors");
 const pool = require("./server/db");
 const path = require('path');
+require('dotenv').config();
 
 // middleware
 app.use(express.json());
@@ -44,9 +45,8 @@ app.get("/purchaseRecords", async (req, res) => {
     }
 })
 
-// app.get("/", (req, res) => {
-//     res.sendFile(path.resolve(__dirname + "/build", "index.html"));
-// });
+// login routers
+app.use("/auth", require("./jwtAuto"));
 
 app.listen(PORT, () => {
     console.log(`app listens port ${PORT}`);
