@@ -5,6 +5,7 @@ const pool = require("./server/db");
 const path = require('path');
 const dotenv = require('dotenv');
 
+
 // middleware
 dotenv.config();
 app.use(express.json());
