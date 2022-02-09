@@ -24,7 +24,7 @@
     "npm": "8.x"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node index.js",
     "server": "nodemon server/index",
     "frontend": "react-scripts start",
     "build": "react-scripts build",
