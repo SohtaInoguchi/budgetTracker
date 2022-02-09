@@ -34,13 +34,10 @@ function App() {
         //   user: username
         // }
     });
-    console.log("response", response.data.rows);
     setUser(() => username);
     const shoppingRecordsByUser = response.data.rows.filter(record => record.user_name === username);
-    console.log("shoppingRecordsByUser", shoppingRecordsByUser);
     setShoppingRecords(shoppingRecordsByUser);
     if (shoppingRecordsByUser.length !== 0) {
-      console.log("In if block");
       // setBudget(() => response.data.rows[response.data.rows.length-1].budget);
       setBudget(() => shoppingRecordsByUser[shoppingRecordsByUser.length - 1].budget);
       // setBalance(() => shoppingRecordsByUser[shoppingRecordsByUser.length - 1].balance);
@@ -71,7 +68,6 @@ function App() {
   }
 
   useEffect( async () => {
-    console.log("user", user);
     getUserData();
     setUser(() => username); //Not really set?
     // setBudget(() => response.data.rows[response.data.rows.length-1].budget);
@@ -81,10 +77,8 @@ function App() {
   }, []);
 
   useEffect(() => {
-    console.log("Balance 2nd useeffect", balance);
     if(isMounted.current) {
       if(balance < 5000) {
-        console.log("balance < 5000!!!");
         setBalanceLow(() => true); 
       }
     }

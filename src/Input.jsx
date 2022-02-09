@@ -27,7 +27,6 @@ function Input(props) {
                 date: new Date()
             }
         });
-        console.log("response", response);
     }
 
     return (
