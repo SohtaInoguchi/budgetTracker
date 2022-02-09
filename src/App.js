@@ -98,7 +98,6 @@ function App() {
       <div>
         <input type="number" id='budget' ref={budgetInput}/>
         <button onClick={setBudgetBalance}>Set budget</button>
-        <button onClick={check}>BalanceLow</button>
       </div>
         <Input budget={budget} balance={balance} setBalance={setBalance} user={user}/>
         <button onClick={getUserData}>Refresh record</button>
