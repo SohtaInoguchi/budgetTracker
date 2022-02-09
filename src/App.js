@@ -90,17 +90,17 @@ function App() {
   return (
     <>
     {isBalanceLow
-      ? <Warning user={user}/>
+      ? <Warning user={user} />
       : <div></div>
     }
       <h1>User: {user}</h1>
       <h1>Budget:¥{budget} Balance:¥{balance}</h1>
       <div>
         <input type="number" id='budget' ref={budgetInput}/>
-        <button onClick={setBudgetBalance}>Set budget</button>
+        <button onClick={setBudgetBalance} className="btn btn-primary">Set budget</button>
       </div>
         <Input budget={budget} balance={balance} setBalance={setBalance} user={user}/>
-        <button onClick={getUserData}>Refresh record</button>
+        <button onClick={getUserData} className="refresh btn btn-primary">Refresh record</button>
         {/* <ShoppingRecords user={user}/> */}
         <ShoppingRecords records={shoppingRecords}/>
     </>

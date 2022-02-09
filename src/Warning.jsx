@@ -4,7 +4,7 @@ export default function Warning ({ user }) {
 
     return (
     <>
-        <h1>Hey {user}, watch your wallet!!</h1>
+        <h1 className="alert alert-danger">Hey {user}, watch your wallet!!</h1>
     </>
     )
 }

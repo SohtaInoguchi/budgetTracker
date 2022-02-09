@@ -33,7 +33,7 @@ function Input(props) {
         <>
         <input ref={itemInput} type="text" id="item" placeholder="what did you buy?"/>
         <input ref={priceInput} type="number" id="price" placeholder="How much was it?"/>
-        <button onClick={addItemPrice}>Add</button>
+        <button onClick={addItemPrice} className="btn btn-primary">Add</button>
       </>
     );
   }

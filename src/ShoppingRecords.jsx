@@ -17,10 +17,10 @@ export default function ShoppingRecords ({ records }) {
     return (
     <>
         {records.map(record => 
-        <ul key={record.id}>
-            <li >Item: {record.item}</li>
-            <li >Price: {record.price}</li>
-            <li >Date: {record.purchase_date}</li>
+        <ul key={record.id} className="list-group">
+            <li className="list-group-item">Item: {record.item}</li>
+            <li className="list-group-item">Price: {record.price}</li>
+            <li className="list-group-item">Date: {record.purchase_date}</li>
         </ul> )}
     </>
     )
